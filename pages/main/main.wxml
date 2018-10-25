@@ -1,0 +1,19 @@
+<view class='content'>
+<!--上半部显示当日的天气信息  -->
+<view class='today'>
+  <view class='info'>
+    <view class='temp'>{{today.wendu}}℃</view>
+    <view class='weather'>{{wind[0]}}</view>
+    <view>友情提示：{{today.ganmao}}</view>
+    <view class='city'>{{city}}</view>
+  </view>
+
+</view>
+<!--下半部显示的是未来四天的天气信息  -->
+<import src="../template/itemtpl"/>
+<view class='future'>
+  <block wx:for="{{future}}" wx:key="{{future-item}}">
+    <template is='future-item' data="{{item}}"/>
+  </block>
+</view>
+</view>
